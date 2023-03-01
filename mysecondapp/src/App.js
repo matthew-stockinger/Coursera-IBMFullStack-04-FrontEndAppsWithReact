@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+const App = () => {
+  const dateObj = new Date();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello world!</h1>
+      <h2>The current date is {dateObj.toLocaleDateString()}.</h2>
+      <h2>The current time is {dateObj.toLocaleTimeString()}.</h2>
     </div>
   );
-}
+};
 
 export default App;
+
+// if (keyDown("space")) {
+//   lowerblink.y = lowerblink.y + 2;
+//   upperblink.y = upperblink.y - 2;
+// } else {
+//   lowerblink.y = lowerblink.y - 2;
+//   upperblink.y = upperblink.y + 2;
+// }
+
+// // make sure blinkers don't move too far.
+// if (lowerblink.y < 200) {
+//   lowerblink.y = 200;
+// }
+// if (lowerblink.y > 400) {
+//   lowerblink.y = 400;
+// }
